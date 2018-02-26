@@ -36,7 +36,6 @@ import time
 import os
 import tfobs
 import hyper_gradient_optimizer as opts
-reload(opts)
 
 # ------- Parse Command Line Arguments ----------------------------------------
 parser = argparse.ArgumentParser(description="Run HGDOptimizer on a tfobs "
