@@ -1,0 +1,9 @@
+.idea/*
+__pycache__/*
+*results*
+.ipynb_checkpoints/*
+*data_tfobs/*
+*logs*
+*results*
+*.pyc
+*jobs*
