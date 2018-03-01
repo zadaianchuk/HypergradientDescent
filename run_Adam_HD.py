@@ -35,7 +35,8 @@ import importlib
 import time
 import os
 import tfobs
-import hyper_gradient_optimizer as opts
+import Adam_HD_optimizer as opts
+reload(opts)
 
 # ------- Parse Command Line Arguments ----------------------------------------
 parser = argparse.ArgumentParser(description="Run HGDOptimizer on a tfobs "
@@ -50,6 +51,8 @@ parser.add_argument("--bs", "--batch_size", required=True, type=int,
 # Optimizer hyperparams other than learning rate
 parser.add_argument("--alpha_0",  type=float, default=0.0001,
     help="Initial value of step size")
+parser.add_argument("--type", default = "global",
+    help="Set to 'global' if you want to optimize one dimentional learning rate. Set to 'local' if you want to find per coordinate optimal learning rate" )
 
 parser.add_argument("--beta", type=float, default=10**(-8),
     help="Constant learning rate (positive float) to use. To set a learning "
@@ -95,6 +98,7 @@ name = args.test_problem.split(".")[-1]
 name += "__HGD"
 name += "__bs_" + str(args.bs)
 name += "__alpha_0_" + str(args.alpha_0)
+name += "__type_"+args.type
 name += "__beta_" + str(args.beta)
 name += "__N_" + str(args.num_steps)
 name += "__seed_" + str(args.random_seed)
@@ -128,8 +132,7 @@ if regularization_losses:
 global_step = tf.Variable(0, trainable=False)
 
 # Set up optimizer
-opt =  opts.HGDOptimizer(alpha_0=args.alpha_0,beta=args.beta)
-
+opt =  opts.AdamHDOptimizer(alpha_0=args.alpha_0,beta=args.beta, type_of_learning_rate=args.type)
 step = opt.minimize(loss, global_step=global_step)
 
 # Lists for tracking stuff
