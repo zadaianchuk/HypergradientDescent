@@ -1,6 +1,6 @@
 # HyperGradientDescent
 
-This repo contains TensorFlow implementation of the Adam-HD algorithm discribed in the paper [**Online Learning Rate Adaptation with Hypergradient Descent**](https://arxiv.org/abs/1703.04782).
+This repo contains TensorFlow implementation of the Adam-HD and SGDN-HD algorithm discribed in the paper [**Online Learning Rate Adaptation with Hypergradient Descent**](https://arxiv.org/abs/1703.04782).
 
 The implementation allows two regimes: one dimentional global learning rate (as was described in the paper and used in the original ADAM) and per-parameter vector of learning rates.
 
