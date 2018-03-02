@@ -2,7 +2,7 @@
 
 This repo contains TensorFlow implementation of the Adam-HD algorithm discribed in the paper [**Online Learning Rate Adaptation with Hypergradient Descent**](https://arxiv.org/abs/1703.04782).
 
-The implementation allows two regimes: one dimentional global learning rate (as was described original paper and used in original ADAM) and per-parameter vector of learning rates.
+The implementation allows two regimes: one dimentional global learning rate (as was described in the paper and used in the original ADAM) and per-parameter vector of learning rates.
 
 Also, we reproduced some results presented in the paper.
 
