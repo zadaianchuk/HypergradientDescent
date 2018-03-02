@@ -4,9 +4,9 @@ This repo contains TensorFlow implementation of the Adam-HD algorithm discribed 
 
 The implementation allows two regimes: one dimentional global learning rate (as was described original paper and used in original ADAM) and per-parameter vector of learning rates.
 
-In addition, we reproduced some results presented in the paper.
+Also, we reproduced some results presented in the paper.
 
-Here you see the results for training CNN on CIFAR-10 with batch size 128 near 250 epoch using ADAM algorithm with learning rates ![img](http://latex.codecogs.com/svg.latex?%24%5Calpha%3D%5B10%5E%7B-3%7D%2C10%5E%7B-4%7D%2C10%5E%7B-5%7D%5D%24%0D%0A).
+Here you see the results of training CNN on CIFAR-10 with batch size 128 near 100 epoch (50000 iterations) using ADAM algorithm with learning rates ![img](http://latex.codecogs.com/svg.latex?%24%5Calpha%3D%5B10%5E%7B-3%7D%2C10%5E%7B-4%7D%2C10%5E%7B-5%7D%5D%24%0D%0A).
 
 ![ADAM](./report/CIFAR10-ADAM.png)
 
